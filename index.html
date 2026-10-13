@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth" x-data="siteShell('dark')" x-init="init()" :class="{ 'dark': theme === 'dark' }">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Vijay - Software Engineer</title>
+        <meta name="description" content="Portfolio of Vijay, a Software Engineer specializing in PHP, Laravel, CodeIgniter, business web applications, custom software, healthcare platforms, e-commerce, APIs, and payment integrations.">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://vijaykumar00.github.io">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Vijay - Software Engineer">
+        <meta property="og:description" content="Portfolio of Vijay, a Software Engineer specializing in PHP, Laravel, CodeIgniter, business web applications, custom software, healthcare platforms, e-commerce, APIs, and payment integrations.">
+        <meta property="og:url" content="https://vijaykumar00.github.io">
+        <meta property="og:image" content="https://vijaykumar00.github.io/images/projects/forevery.webp">
+        <meta property="og:site_name" content="Vijay">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Vijay - Software Engineer">
+        <meta name="twitter:description" content="Portfolio of Vijay, a Software Engineer specializing in PHP, Laravel, CodeIgniter, business web applications, custom software, healthcare platforms, e-commerce, APIs, and payment integrations.">
+        <meta name="twitter:image" content="https://vijaykumar00.github.io/images/projects/forevery.webp">
+        <meta name="theme-color" content="#fbf7ef" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#090d11" media="(prefers-color-scheme: dark)">
+
+        <script type="application/ld+json">
+            {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vijay",
+    "jobTitle": "Software Engineer",
+    "description": "Portfolio of Vijay, a Software Engineer specializing in PHP, Laravel, CodeIgniter, business web applications, custom software, healthcare platforms, e-commerce, APIs, and payment integrations.",
+    "email": "vc892782@gmail.com",
+    "telephone": "+91 70183 06672",
+    "url": "https://vijaykumar00.github.io",
+    "image": "https://vijaykumar00.github.io/images/projects/forevery.webp",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mohali",
+        "addressRegion": "Punjab",
+        "addressCountry": "IN"
+    },
+    "sameAs": [
+        "https://www.linkedin.com/in/vijay-kumar-9676bb1a1/",
+        "https://github.com/vijaykumar00"
+    ],
+    "knowsAbout": [
+        "Laravel",
+        "PHP",
+        "Healthcare Platforms",
+        "Luxury E-Commerce",
+        "Multi-Tenant SaaS",
+        "Payment Integrations",
+        "REST API Architecture"
+    ]
+}
+        </script>
+
+        <script>
+            (function () {
+                try {
+                    var match = document.cookie.match(/(?:^|; )theme=(dark|light)(?:;|$)/);
+                    var stored = null;
+                    try { stored = window.localStorage.getItem('theme'); } catch (storageError) {}
+                    var theme = stored === 'dark' || stored === 'light' ? stored : (match ? match[1] : null);
+                    if (theme) {
+                        document.documentElement.classList.toggle('dark', theme === 'dark');
+                    }
+                } catch (error) {}
+            })();
+        </script>
+
+        <link rel="preload" as="style" href="./build/assets/app-Cax0wyp6.css" /><link rel="modulepreload" href="./build/assets/app-DVGn5na6.js" /><link rel="stylesheet" href="./build/assets/app-Cax0wyp6.css" /><script type="module" src="./build/assets/app-DVGn5na6.js"></script>    </head>
+    <body class="min-h-screen bg-porcelain text-ink antialiased transition-colors duration-300 dark:bg-obsidian dark:text-porcelain" @keydown.escape.window="mobileOpen = false">
+        <a href="#main" class="skip-link">Skip to content</a>
+
+        <header class="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/95 backdrop-blur dark:border-porcelain/10 dark:bg-obsidian/90">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex min-h-16 items-center justify-between gap-4">
+                    <a href="./" class="font-display text-xl font-semibold text-ink focus-ring dark:text-porcelain" aria-label="Vijay home">
+                        Vijay
+                    </a>
+
+                    <nav class="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+                                                    <a href="#work" class="nav-link">Work</a>
+                                                    <a href="#experience" class="nav-link">Experience</a>
+                                                    <a href="#skills" class="nav-link">Skills</a>
+                                                    <a href="#contact" class="nav-link">Contact</a>
+                                            </nav>
+
+                    <div class="hidden items-center gap-3 md:flex">
+                        <button type="button" class="icon-button" x-on:click="toggleTheme()" :aria-label="theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'" title="Toggle theme">
+                            <span x-show="theme === 'light'"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.4 14.4A8 8 0 0 1 9.6 3.6 8.8 8.8 0 1 0 20.4 14.4Z" />
+        </svg>
+        </span>
+                            <span x-cloak x-show="theme === 'dark'"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        </span>
+                        </button>
+
+                        <a href="resume.pdf" class="btn-secondary">
+                            <svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16" />
+        </svg>
+                                    <span>Resume</span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="icon-button md:hidden" x-on:click="mobileOpen = ! mobileOpen" :aria-expanded="mobileOpen.toString()" aria-controls="mobile-navigation" aria-label="Toggle navigation">
+                        <span x-show="! mobileOpen"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        </span>
+                        <span x-cloak x-show="mobileOpen"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+        </span>
+                    </button>
+                </div>
+
+                <div id="mobile-navigation" x-cloak x-show="mobileOpen" x-transition.opacity.duration.150ms class="border-t border-ink/10 py-4 dark:border-porcelain/10 md:hidden">
+                    <nav class="grid gap-2" aria-label="Mobile navigation">
+                                                    <a href="#work" class="mobile-nav-link" x-on:click="mobileOpen = false">Work</a>
+                                                    <a href="#experience" class="mobile-nav-link" x-on:click="mobileOpen = false">Experience</a>
+                                                    <a href="#skills" class="mobile-nav-link" x-on:click="mobileOpen = false">Skills</a>
+                                                    <a href="#contact" class="mobile-nav-link" x-on:click="mobileOpen = false">Contact</a>
+                                            </nav>
+
+                    <div class="mt-4 flex items-center justify-between gap-3">
+                        <button type="button" class="btn-secondary" x-on:click="toggleTheme()">
+                            <span x-show="theme === 'light'"><svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.4 14.4A8 8 0 0 1 9.6 3.6 8.8 8.8 0 1 0 20.4 14.4Z" />
+        </svg>
+        </span>
+                            <span x-cloak x-show="theme === 'dark'"><svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        </span>
+                            <span x-text="theme === 'dark' ? 'Light' : 'Dark'"></span>
+                        </button>
+
+                        <a href="resume.pdf" class="btn-secondary">
+                            <svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16" />
+        </svg>
+                                    <span>Resume</span>
+                        </a>
+                    </div>
+                </div>
+</div>
+        </header>
+
+        <main id="main">
+            <section class="hero-shell">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-16 lg:py-12">
+    <div class="grid gap-8 lg:min-h-[calc(100svh-12rem)] lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.9fr)] lg:items-start">
+                <div class="hero-copy">
+                    <h1 class="hero-title max-w-4xl font-display text-5xl font-semibold leading-tight text-ink dark:text-porcelain sm:text-6xl lg:text-7xl">
+                        Hi, I'm Vijay.
+                    </h1>
+                    <p class="hero-lead mt-6 max-w-3xl text-xl leading-8 text-ink/80 dark:text-porcelain/80 sm:text-2xl">
+                        Software Engineer | PHP, Laravel &amp; CodeIgniter Ecosystem | Web Apps &amp; Custom Software
+                    </p>
+                    <p class="hero-subcopy mt-6 max-w-2xl text-base leading-7 text-ink/70 dark:text-porcelain/70 sm:text-lg">
+                        I build websites, web applications, dashboards, portals, e-commerce systems, and custom software that turn business workflows into reliable digital systems.
+                    </p>
+
+                    <div class="hero-actions mt-9 flex flex-col gap-3 sm:flex-row">
+                        <a href="#work" class="btn-primary">
+                            <span>View Work</span>
+                            <svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14m0 0 6-6m-6 6-6-6" />
+        </svg>
+                                </a>
+                        <a href="resume.pdf" class="btn-secondary">
+                            <svg class="size-5 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16" />
+        </svg>
+                                    <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn-ghost">Contact Me</a>
+                    </div>
+                </div>
+
+                <aside class="hero-lab" x-data="{ active: 0, systems: JSON.parse('[{\u0022key\u0022:\u0022healthcare\u0022,\u0022label\u0022:\u0022Healthcare\u0022,\u0022need\u0022:\u0022Patient records, reports, field teams, and clinical operations in one dependable flow.\u0022,\u0022build\u0022:\u0022Laravel APIs, dashboards, access control, and LIS\\\/RIS\\\/PACS-friendly integrations.\u0022,\u0022output\u0022:\u0022A stable healthcare platform with cleaner reporting and faster daily operations.\u0022,\u0022stack\u0022:[\u0022Laravel\u0022,\u0022REST APIs\u0022,\u0022MySQL\u0022,\u0022RBAC\u0022]},{\u0022key\u0022:\u0022jewellery\u0022,\u0022label\u0022:\u0022Jewellery\u0022,\u0022need\u0022:\u0022Products, diamond inventory, pricing, custom orders, and high-value payments.\u0022,\u0022build\u0022:\u0022E-commerce storefronts, inventory sync, configurators, and secure checkout flows.\u0022,\u0022output\u0022:\u0022A refined selling experience backed by real-time stock and business control.\u0022,\u0022stack\u0022:[\u0022Laravel\u0022,\u0022RapNet\u0022,\u0022IDEX\u0022,\u0022Payments\u0022]},{\u0022key\u0022:\u0022construction\u0022,\u0022label\u0022:\u0022Construction\u0022,\u0022need\u0022:\u0022Projects, customers, documents, payments, and team updates scattered across tools.\u0022,\u0022build\u0022:\u0022Client portals, admin dashboards, project tracking, billing, and document modules.\u0022,\u0022output\u0022:\u0022A custom web app where clients and internal teams see the right data quickly.\u0022,\u0022stack\u0022:[\u0022PHP\u0022,\u0022CodeIgniter\u0022,\u0022MySQL\u0022,\u0022Reports\u0022]},{\u0022key\u0022:\u0022custom\u0022,\u0022label\u0022:\u0022Custom SaaS\u0022,\u0022need\u0022:\u0022Manual business processes that need structure, automation, roles, and reports.\u0022,\u0022build\u0022:\u0022A maintainable web application with workflows, APIs, databases, and dashboards.\u0022,\u0022output\u0022:\u0022Software shaped around the business instead of forcing the business into a template.\u0022,\u0022stack\u0022:[\u0022Laravel\u0022,\u0022Livewire\u0022,\u0022APIs\u0022,\u0022Vite\u0022]}]') }" aria-label="Interactive business software examples">
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase text-accent dark:text-champagne">Business software lab</p>
+                            <p class="mt-2 font-display text-3xl font-semibold text-ink dark:text-porcelain">5+ years experience</p>
+                        </div>
+                        <span class="lab-status self-start" x-text="systems[active].label"></span>
+                    </div>
+
+                    <div class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4" role="group" aria-label="Business software examples">
+                        <template x-for="(system, index) in systems" :key="system.key">
+                            <button type="button" class="lab-tab" x-on:click="active = index" :class="active === index ? 'lab-tab-active' : 'lab-tab-idle'" :aria-pressed="(active === index).toString()">
+                                <span x-text="system.label"></span>
+                            </button>
+                        </template>
+                    </div>
+
+                    <div class="lab-canvas" aria-hidden="true">
+                        <svg class="absolute inset-0 h-full w-full" viewBox="0 0 520 210" preserveAspectRatio="none">
+                            <path class="lab-flow-muted" d="M70 105 C155 36 250 172 336 105 S450 72 482 105" />
+                            <path class="lab-flow-line" d="M70 105 C155 36 250 172 336 105 S450 72 482 105" />
+                        </svg>
+
+                                                    <div class="lab-node lab-node-1">
+                                <span class="lab-node-index">01</span>
+                                <span>Business Need</span>
+                            </div>
+                                                    <div class="lab-node lab-node-2">
+                                <span class="lab-node-index">02</span>
+                                <span>PHP Backend</span>
+                            </div>
+                                                    <div class="lab-node lab-node-3">
+                                <span class="lab-node-index">03</span>
+                                <span>Live Web App</span>
+                            </div>
+                        
+                        <span class="lab-packet lab-packet-1"></span>
+                        <span class="lab-packet lab-packet-2"></span>
+                        <span class="lab-packet lab-packet-3"></span>
+                    </div>
+
+                    <div class="mt-5 grid gap-3 md:grid-cols-3" x-transition.opacity.duration.150ms>
+                        <div class="lab-detail">
+                            <p>Need</p>
+                            <span x-text="systems[active].need"></span>
+                        </div>
+                        <div class="lab-detail">
+                            <p>Build</p>
+                            <span x-text="systems[active].build"></span>
+                        </div>
+                        <div class="lab-detail">
+                            <p>Result</p>
+                            <span x-text="systems[active].output"></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <template x-for="tech in systems[active].stack" :key="tech">
+                            <span class="lab-chip" x-text="tech"></span>
+                        </template>
+                    </div>
+                </aside>
+            </div>
+</div>
+    </section>
+
+    <section  id="about"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">About</p>
+                
+                                    <h2 class="section-title">I turn business workflows into web applications that actually work.</h2>
+                
+                                    <p class="section-intro">From healthcare operations to jewellery commerce, real estate, construction, CRM, and custom SaaS, I build practical software around how your business runs.</p>
+                            </div>
+        
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
+            <div class="prose-panel space-y-5">
+                                    <p>I am a Software Engineer with 5+ years of experience in the PHP ecosystem, especially Laravel and CodeIgniter, turning business ideas, manual operations, and complex workflows into secure, scalable web applications. My work sits between business understanding and engineering execution: I listen to how a company actually runs, map the moving parts, and build software that makes the process faster, cleaner, and easier to manage.</p>
+                                    <p>Whether it is a healthcare platform for patient and clinical data, a jewellery or retail e-commerce store with inventory and payments, a construction or real-estate portal, a CRM, a booking system, or a completely custom internal tool, I can help shape the idea into a practical product. I build with Laravel, APIs, databases, dashboards, payment integrations, role-based access, and maintainable architecture so the final system supports real business growth, not just a good-looking screen.</p>
+                            </div>
+
+            <div class="grid gap-6">
+                <div class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">How I Help</h3>
+                    <ul class="mt-5 grid gap-3">
+                                                    <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                                <span>Transform manual business workflows into web apps, dashboards, portals, and internal software.</span>
+                            </li>
+                                                    <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                                <span>Build e-commerce and retail platforms for jewellery, inventory-heavy stores, and high-value payments.</span>
+                            </li>
+                                                    <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                                <span>Create healthcare, construction, real estate, CRM, booking, and SaaS systems around real operational needs.</span>
+                            </li>
+                                                    <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                                <span>Connect third-party APIs, payments, user roles, reports, and databases into one reliable Laravel platform.</span>
+                            </li>
+                                            </ul>
+                </div>
+
+                <div class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Education & Certification</h3>
+                    <dl class="mt-5 grid gap-4">
+                                                    <div>
+                                <dt class="text-sm font-semibold text-ink dark:text-porcelain">Bachelor of Technology, Computer Science</dt>
+                                <dd class="mt-1 text-sm text-ink/60 dark:text-porcelain/60">Bahra University, 2018 - 2021</dd>
+                            </div>
+                                                    <div>
+                                <dt class="text-sm font-semibold text-ink dark:text-porcelain">Diploma in Computer Science</dt>
+                                <dd class="mt-1 text-sm text-ink/60 dark:text-porcelain/60">Government Polytechnic Sundernagar, HP, 2014 - 2016</dd>
+                            </div>
+                                                    <div>
+                                <dt class="text-sm font-semibold text-ink dark:text-porcelain">PHP Certification</dt>
+                                <dd class="mt-1 text-sm text-ink/60 dark:text-porcelain/60">Certification</dd>
+                            </div>
+                                            </dl>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+
+    <section class="bg-ink py-10 text-porcelain dark:bg-charcoal" aria-labelledby="achievement-title">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 id="achievement-title" class="sr-only">Selected quantified achievements</h2>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                                    <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
+    <p class="font-display text-4xl font-semibold text-champagne">40%</p>
+    <p class="mt-3 text-sm font-medium leading-6 text-porcelain/90">deployment overhead reduction across multi-brand jewelry storefronts</p>
+</article>
+                                    <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
+    <p class="font-display text-4xl font-semibold text-champagne">60%</p>
+    <p class="mt-3 text-sm font-medium leading-6 text-porcelain/90">manual reporting effort cut across 50+ healthcare field staff</p>
+</article>
+                                    <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
+    <p class="font-display text-4xl font-semibold text-champagne">25%</p>
+    <p class="mt-3 text-sm font-medium leading-6 text-porcelain/90">conversion uplift contribution from e-commerce performance work</p>
+</article>
+                                    <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
+    <p class="font-display text-4xl font-semibold text-champagne">99.9%</p>
+    <p class="mt-3 text-sm font-medium leading-6 text-porcelain/90">uptime after the Atulaya clinical platform redesign</p>
+</article>
+                                    <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
+    <p class="font-display text-4xl font-semibold text-champagne">10,000+</p>
+    <p class="mt-3 text-sm font-medium leading-6 text-porcelain/90">certified stones handled through real-time diamond inventory</p>
+</article>
+                            </div>
+</div>
+    </section>
+
+    <section  id="experience"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">Experience</p>
+                
+                                    <h2 class="section-title">A timeline of production PHP and Laravel delivery.</h2>
+                
+                                    <p class="section-intro">Four roles across healthcare operations, luxury commerce, real estate payments, travel APIs, and SaaS workflows.</p>
+                            </div>
+        
+        <div class="mx-auto max-w-4xl">
+                            <article class="group/timeline relative pb-10 pl-9 last:pb-0">
+    <span class="absolute left-0 top-1.5 flex size-4 items-center justify-center rounded-full border border-accent/70 bg-porcelain dark:bg-obsidian" aria-hidden="true">
+        <span class="size-1.5 rounded-full bg-accent"></span>
+    </span>
+    <span class="absolute bottom-0 left-[7px] top-7 w-px bg-ink/10 dark:bg-porcelain/10 group-last/timeline:hidden" aria-hidden="true"></span>
+
+    <div class="rounded-lg border border-ink/10 bg-white/70 p-6 shadow-soft dark:border-porcelain/10 dark:bg-white/5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+                <h3 class="text-xl font-semibold text-ink dark:text-porcelain">Software Engineer - Laravel Backend</h3>
+                <p class="mt-1 text-sm font-medium text-accent dark:text-champagne">Collationhub Pvt Ltd | Mohali, Punjab</p>
+            </div>
+            <p class="text-sm text-ink/60 dark:text-porcelain/60">Nov 2025 - May 2026</p>
+        </div>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Architected a real-time diamond search and pricing engine integrating live RapNet and IDEX APIs, managing 10,000+ certified stones with dynamic pricing across 5 international luxury storefronts and achieving sub-second inventory updates.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Designed and built a multi-tenant Laravel platform on a single shared codebase powering Forevery, Grand Diamonds, and the JewelExperts ecosystem, cutting deployment overhead by ~40% and enabling brand-specific theming with shared inventory logic.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Integrated PCI-DSS-compliant payment gateways with automated invoicing for high-value luxury transactions, maintaining zero payment-related security incidents since launch.</span>
+                </li>
+                    </ul>
+    </div>
+</article>
+                            <article class="group/timeline relative pb-10 pl-9 last:pb-0">
+    <span class="absolute left-0 top-1.5 flex size-4 items-center justify-center rounded-full border border-accent/70 bg-porcelain dark:bg-obsidian" aria-hidden="true">
+        <span class="size-1.5 rounded-full bg-accent"></span>
+    </span>
+    <span class="absolute bottom-0 left-[7px] top-7 w-px bg-ink/10 dark:bg-porcelain/10 group-last/timeline:hidden" aria-hidden="true"></span>
+
+    <div class="rounded-lg border border-ink/10 bg-white/70 p-6 shadow-soft dark:border-porcelain/10 dark:bg-white/5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+                <h3 class="text-xl font-semibold text-ink dark:text-porcelain">Full-Stack Developer</h3>
+                <p class="mt-1 text-sm font-medium text-accent dark:text-champagne">Atulaya Healthcare | Mohali, Punjab</p>
+            </div>
+            <p class="text-sm text-ink/60 dark:text-porcelain/60">Oct 2024 - Nov 2025</p>
+        </div>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Rebuilt internal clinical operations dashboards using Laravel and Vue.js, achieving 99.9% uptime post full-system redesign and eliminating prior platform instability.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Owned end-to-end user and patient data management across clinical workflows, designing RESTful APIs for patient records, clinical activities, and diagnostic reports between LIS, RIS, and PACS systems.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Integrated the Unolo API for real-time GPS-based field-staff tracking and automated daily reporting, cutting manual reporting effort by ~60% across 50+ field staff.</span>
+                </li>
+                    </ul>
+    </div>
+</article>
+                            <article class="group/timeline relative pb-10 pl-9 last:pb-0">
+    <span class="absolute left-0 top-1.5 flex size-4 items-center justify-center rounded-full border border-accent/70 bg-porcelain dark:bg-obsidian" aria-hidden="true">
+        <span class="size-1.5 rounded-full bg-accent"></span>
+    </span>
+    <span class="absolute bottom-0 left-[7px] top-7 w-px bg-ink/10 dark:bg-porcelain/10 group-last/timeline:hidden" aria-hidden="true"></span>
+
+    <div class="rounded-lg border border-ink/10 bg-white/70 p-6 shadow-soft dark:border-porcelain/10 dark:bg-white/5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+                <h3 class="text-xl font-semibold text-ink dark:text-porcelain">PHP Developer</h3>
+                <p class="mt-1 text-sm font-medium text-accent dark:text-champagne">Star Reify Tech Solutions | Baddi, Himachal Pradesh</p>
+            </div>
+            <p class="text-sm text-ink/60 dark:text-porcelain/60">Dec 2022 - Sep 2024</p>
+        </div>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Delivered a unified Payments Dashboard for AFIK Group, consolidating installments, maintenance fees, utility billing, and reservation transfers across multiple properties into a single management interface.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Built a multi-vendor grocery e-commerce SaaS platform from scratch with Laravel and React, covering the full product lifecycle from vendor onboarding to order fulfillment and customer data handling.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Optimized MySQL queries and implemented caching strategies on a high-traffic e-commerce platform, improving page-load speed and contributing to a 25% uplift in conversion rate.</span>
+                </li>
+                    </ul>
+    </div>
+</article>
+                            <article class="group/timeline relative pb-10 pl-9 last:pb-0">
+    <span class="absolute left-0 top-1.5 flex size-4 items-center justify-center rounded-full border border-accent/70 bg-porcelain dark:bg-obsidian" aria-hidden="true">
+        <span class="size-1.5 rounded-full bg-accent"></span>
+    </span>
+    <span class="absolute bottom-0 left-[7px] top-7 w-px bg-ink/10 dark:bg-porcelain/10 group-last/timeline:hidden" aria-hidden="true"></span>
+
+    <div class="rounded-lg border border-ink/10 bg-white/70 p-6 shadow-soft dark:border-porcelain/10 dark:bg-white/5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+                <h3 class="text-xl font-semibold text-ink dark:text-porcelain">Junior PHP Developer</h3>
+                <p class="mt-1 text-sm font-medium text-accent dark:text-champagne">Zasya Solution | India</p>
+            </div>
+            <p class="text-sm text-ink/60 dark:text-porcelain/60">Jul 2021 - Oct 2022</p>
+        </div>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Developed responsive PHP web applications for multiple business clients, working across the full stack with HTML, CSS, JavaScript, Bootstrap, jQuery, and MySQL.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Implemented authentication and CRUD modules for client-facing web applications, building a foundation in backend feature development.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden="true"></span>
+                    <span>Resolved production issues and collaborated with cross-functional teams to deliver client requirements on schedule.</span>
+                </li>
+                    </ul>
+    </div>
+</article>
+                    </div>
+</div>
+</section>
+
+    <section  id="work"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">Featured Projects</p>
+                
+                                    <h2 class="section-title">Case studies with measurable operational impact.</h2>
+                
+                                    <p class="section-intro">Four selected builds across jewelry commerce, healthcare operations, multi-tenant SaaS, and real estate payments.</p>
+                            </div>
+        
+        <div x-data="{ filter: 'all' }">
+            <div class="mb-8 flex flex-wrap gap-2" role="group" aria-label="Project filters">
+                                    <button type="button" class="filter-button" x-on:click="filter = 'all'" :class="filter === 'all' ? 'filter-active' : 'filter-idle'">
+                        All
+                    </button>
+                                    <button type="button" class="filter-button" x-on:click="filter = 'commerce'" :class="filter === 'commerce' ? 'filter-active' : 'filter-idle'">
+                        Commerce
+                    </button>
+                                    <button type="button" class="filter-button" x-on:click="filter = 'saas'" :class="filter === 'saas' ? 'filter-active' : 'filter-idle'">
+                        SaaS
+                    </button>
+                                    <button type="button" class="filter-button" x-on:click="filter = 'healthcare'" :class="filter === 'healthcare' ? 'filter-active' : 'filter-idle'">
+                        Healthcare
+                    </button>
+                                    <button type="button" class="filter-button" x-on:click="filter = 'payments'" :class="filter === 'payments' ? 'filter-active' : 'filter-idle'">
+                        Payments
+                    </button>
+                            </div>
+
+            <div class="grid gap-6 lg:grid-cols-2">
+                                    <div x-show="filter === 'all' || filter === 'commerce'" x-transition.opacity.duration.150ms>
+                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+    <picture>
+        <source srcset="./images/projects/forevery.webp" type="image/webp">
+        <img
+            src="./images/projects/forevery.png"
+            alt="Editorial dashboard-style thumbnail for the Forevery jewelry commerce platform."
+            width="960"
+            height="620"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[48/31] w-full object-cover"
+        >
+    </picture>
+
+    <div class="flex flex-1 flex-col p-6">
+        <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-semibold text-ink dark:text-porcelain">Forevery</h3>
+
+                            <a href="https://forevery.one" target="_blank" rel="noopener noreferrer" class="icon-button shrink-0" aria-label="Open Forevery">
+                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17 17 7M9 7h8v8" />
+        </svg>
+                        </a>
+                    </div>
+
+        <p class="mt-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">Flagship luxury jewelry e-commerce platform unifying diamond sourcing and retail.</p>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Delivered real-time diamond inventory through RapNet and IDEX integration.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Built a bespoke ring-builder for metal types, settings, and diamond pairings.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Supported PCI-compliant checkout for high-value international transactions.</span>
+                </li>
+                    </ul>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RapNet
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    IDEX
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Stripe
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Razorpay
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    MySQL
+</span>
+                    </div>
+    </div>
+</article>
+                    </div>
+                                    <div x-show="filter === 'all' || filter === 'saas'" x-transition.opacity.duration.150ms>
+                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+    <picture>
+        <source srcset="./images/projects/jewelexperts.webp" type="image/webp">
+        <img
+            src="./images/projects/jewelexperts.png"
+            alt="Abstract multi-brand storefront system thumbnail for JewelExperts."
+            width="960"
+            height="620"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[48/31] w-full object-cover"
+        >
+    </picture>
+
+    <div class="flex flex-1 flex-col p-6">
+        <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-semibold text-ink dark:text-porcelain">JewelExperts Multi-Tenant Ecosystem</h3>
+
+                    </div>
+
+        <p class="mt-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">Single modular Laravel codebase enabling 4 luxury jewelry brands to launch independently branded storefronts.</p>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Powered Ros Juweliers, Astrid Diamonds, Marcus Gold, and Darya Diamonds.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Shared inventory and infrastructure while preserving brand-specific theming.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Cut per-brand deployment effort by ~40%.</span>
+                </li>
+                    </ul>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Multi-Tenant SaaS
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Shared Inventory
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RBAC
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Vite
+</span>
+                    </div>
+    </div>
+</article>
+                    </div>
+                                    <div x-show="filter === 'all' || filter === 'healthcare'" x-transition.opacity.duration.150ms>
+                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+    <picture>
+        <source srcset="./images/projects/atulaya.webp" type="image/webp">
+        <img
+            src="./images/projects/atulaya.png"
+            alt="Clinical operations dashboard thumbnail for Atulaya Healthcare."
+            width="960"
+            height="620"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[48/31] w-full object-cover"
+        >
+    </picture>
+
+    <div class="flex flex-1 flex-col p-6">
+        <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-semibold text-ink dark:text-porcelain">Atulaya Healthcare</h3>
+
+                    </div>
+
+        <p class="mt-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">Clinical data platform connecting patient workflows, diagnostics, and operations dashboards.</p>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Rebuilt patient and clinical data workflows connecting LIS, RIS, and PACS systems.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Restored platform stability to 99.9% uptime after full-system redesign.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Safeguarded sensitive patient data across integrated services.</span>
+                </li>
+                    </ul>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Vue.js
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    REST APIs
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    LIS
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RIS
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    PACS
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Unolo
+</span>
+                    </div>
+    </div>
+</article>
+                    </div>
+                                    <div x-show="filter === 'all' || filter === 'payments'" x-transition.opacity.duration.150ms>
+                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+    <picture>
+        <source srcset="./images/projects/afik.webp" type="image/webp">
+        <img
+            src="./images/projects/afik.png"
+            alt="Real estate payments dashboard thumbnail for AFIK Group."
+            width="960"
+            height="620"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[48/31] w-full object-cover"
+        >
+    </picture>
+
+    <div class="flex flex-1 flex-col p-6">
+        <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-semibold text-ink dark:text-porcelain">AFIK Group Payments Portal</h3>
+
+                    </div>
+
+        <p class="mt-3 text-sm leading-6 text-ink/75 dark:text-porcelain/75">Real estate payments backend replacing fragmented manual billing with a unified management dashboard.</p>
+
+        <ul class="mt-5 space-y-3">
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Unified installments, maintenance billing, utility payments, and reservation transfers.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Consolidated payments across multiple properties into one interface.</span>
+                </li>
+                            <li class="flex gap-3 text-sm leading-6 text-ink/80 dark:text-porcelain/80">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                    <span>Improved finance operations by replacing fragmented manual billing flows.</span>
+                </li>
+                    </ul>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    MySQL
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Payment Processing
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RBAC
+</span>
+                            <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    REST APIs
+</span>
+                    </div>
+    </div>
+</article>
+                    </div>
+                            </div>
+        </div>
+</div>
+</section>
+
+    <section  id="skills"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">Skills</p>
+                
+                                    <h2 class="section-title">A PHP-first software engineering stack with practical full-stack range.</h2>
+                
+                                    <p class="section-intro">Backend architecture, API delivery, payment integrations, and frontend collaboration across production platforms.</p>
+                            </div>
+        
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Backend</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    PHP 8.x
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel 10/11
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Node.js
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    CodeIgniter
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Eloquent ORM
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RESTful API Design
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    MVC Architecture
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Frontend</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Vue.js 3
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Livewire
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    JavaScript ES6+
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    React
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    HTML5
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    CSS3
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Database &amp; Caching</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    MySQL Query Optimization
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Indexing
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Redis
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel Horizon
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Multi-Tenant Architecture
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Architecture</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Multi-Tenant SaaS Design
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Modular Architecture
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Package-Based Architecture
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RBAC
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Spatie Permission
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Spatie Actions
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Payments &amp; Integrations</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Stripe
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Razorpay
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    PCI-DSS Compliance
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    RapNet
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    IDEX
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Unolo
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    OpenAI API
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">Testing &amp; Quality</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    TDD
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Pest PHP
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    PHPUnit
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Custom Package Development
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Code Review
+</span>
+                                            </div>
+                </article>
+                            <article class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                    <h3 class="text-lg font-semibold text-ink dark:text-porcelain">DevOps &amp; Tools</h3>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Git
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    GitHub
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Bitbucket
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    CI/CD Pipelines
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Docker Basic
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Composer
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    NPM
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Vite
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Laravel Herd
+</span>
+                                                    <span class="inline-flex min-h-9 items-center rounded-full border border-ink/10 bg-bone px-3 text-sm text-ink/80 dark:border-porcelain/10 dark:bg-white/5 dark:text-porcelain/80">
+    Cursor IDE
+</span>
+                                            </div>
+                </article>
+                    </div>
+</div>
+</section>
+
+    <section  id="domains"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">Domain Expertise</p>
+                
+                                    <h2 class="section-title">Built around data-heavy business workflows.</h2>
+                
+                                    <p class="section-intro">Primary specialization in healthcare and luxury commerce, with delivery experience across adjacent SaaS domains.</p>
+                            </div>
+        
+        <div class="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="rounded-lg border border-accent/25 bg-accent/10 p-6 dark:bg-champagne/10">
+                <p class="text-sm font-semibold text-accent dark:text-champagne">Primary</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                                            <span class="domain-badge domain-badge-strong">Healthcare</span>
+                                            <span class="domain-badge domain-badge-strong">Luxury Jewelry &amp; Retail E-Commerce</span>
+                                    </div>
+            </div>
+
+            <div class="rounded-lg border border-ink/10 bg-white/70 p-6 dark:border-porcelain/10 dark:bg-white/5">
+                <p class="text-sm font-semibold text-ink dark:text-porcelain">Additional</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                                            <span class="domain-badge">Real Estate</span>
+                                            <span class="domain-badge">Travel &amp; CRM</span>
+                                            <span class="domain-badge">Grocery/Retail SaaS</span>
+                                            <span class="domain-badge">Multi-Tenant SaaS</span>
+                                            <span class="domain-badge">Inventory Management</span>
+                                    </div>
+            </div>
+        </div>
+</div>
+</section>
+
+    <section  id="contact"  class="section-band reveal" data-reveal>
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="section-heading">
+                                    <p class="eyebrow">Contact</p>
+                
+                                    <h2 class="section-title">Let us talk Laravel, platforms, and serious business workflows.</h2>
+                
+                                    <p class="section-intro">Use the form or reach Vijay directly through email, phone, LinkedIn, or GitHub.</p>
+                            </div>
+        
+        <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
+            <div class="space-y-4">
+                <a href="mailto:vc892782@gmail.com" class="contact-link">
+                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="14" x="3" y="5" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+        </svg>
+                            <span>vc892782@gmail.com</span>
+                </a>
+                <a href="tel:+917018306672" class="contact-link">
+                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.61a2 2 0 0 1-.45 2.11L8 9.7a16 16 0 0 0 6.3 6.3l1.26-1.26a2 2 0 0 1 2.11-.45c.84.28 1.71.48 2.61.6A2 2 0 0 1 22 16.92Z" />
+        </svg>
+                            <span>+91 70183 06672</span>
+                </a>
+                <a href="https://www.linkedin.com/in/vijay-kumar-9676bb1a1/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5ZM3 9.25h4v11.5H3V9.25Zm6.25 0h3.83v1.57h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.65 4.77 6.1v5.78h-4v-5.13c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.71v5.22h-4V9.25Z" />
+        </svg>
+                            <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/vijaykumar00" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.03 2.25c-5.48 0-9.93 4.45-9.93 9.94 0 4.39 2.84 8.11 6.79 9.43.5.09.68-.22.68-.48v-1.7c-2.76.6-3.34-1.18-3.34-1.18-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.88 1.51 2.31 1.08 2.88.82.09-.64.35-1.08.63-1.33-2.2-.25-4.52-1.1-4.52-4.91 0-1.08.39-1.97 1.02-2.66-.1-.25-.44-1.26.1-2.62 0 0 .83-.27 2.73 1.02a9.4 9.4 0 0 1 4.96 0c1.9-1.29 2.73-1.02 2.73-1.02.54 1.36.2 2.37.1 2.62.64.69 1.02 1.58 1.02 2.66 0 3.82-2.32 4.66-4.54 4.91.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48a9.95 9.95 0 0 0 6.78-9.43c0-5.49-4.45-9.94-9.94-9.94Z" clip-rule="evenodd" />
+        </svg>
+                            <span>GitHub</span>
+                </a>
+            </div>
+
+                            <form method="POST" action="https://formsubmit.co/vc892782@gmail.com" x-data="contactForm('https:\/\/formsubmit.co\/ajax\/vc892782@gmail.com')" x-on:submit.prevent="submit($event)" class="rounded-lg border border-ink/10 bg-white/75 p-6 shadow-soft dark:border-porcelain/10 dark:bg-white/5">
+                    <input type="hidden" name="_subject" value="New portfolio message">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+                    <div x-cloak x-show="status === 'sent'" role="status" class="mb-5 rounded-lg border border-emerald-700/20 bg-emerald-50 px-4 py-3 text-sm text-emerald-900 dark:border-emerald-300/20 dark:bg-emerald-300/10 dark:text-emerald-100">
+                        Thanks for reaching out. Your message has been sent and I will reply soon.
+                    </div>
+                    <div x-cloak x-show="status === 'error'" role="alert" class="mb-5 rounded-lg border border-red-700/20 bg-red-50 px-4 py-3 text-sm text-red-900 dark:border-red-300/20 dark:bg-red-300/10 dark:text-red-100">
+                        Sorry, the message could not be sent. Please email me directly at vc892782@gmail.com.
+                    </div>
+
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        <div>
+                            <label for="name" class="field-label">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="field-label">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" maxlength="190" class="field-input" required>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <label for="message" class="field-label">Message</label>
+                        <textarea id="message" name="message" rows="6" maxlength="5000" class="field-input min-h-40 resize-y" required></textarea>
+                    </div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button type="submit" class="btn-primary disabled:cursor-wait disabled:opacity-60" x-bind:disabled="status === 'sending'">
+                            <span x-text="status === 'sending' ? 'Sending...' : 'Send Message'">Send Message</span>
+                        </button>
+                    </div>
+                </form>
+                    </div>
+</div>
+</section>
+        </main>
+
+        <footer class="border-t border-ink/10 bg-bone py-10 dark:border-porcelain/10 dark:bg-charcoal">
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                    <p class="text-sm text-ink/70 dark:text-porcelain/70">
+                        &copy; 2026 Vijay.
+                    </p>
+
+                    <div class="flex items-center gap-3" aria-label="Social links">
+                        <a href="mailto:vc892782@gmail.com" class="icon-button" aria-label="Email Vijay"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="14" x="3" y="5" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+        </svg>
+        </a>
+                        <a href="https://www.linkedin.com/in/vijay-kumar-9676bb1a1/" class="icon-button" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5ZM3 9.25h4v11.5H3V9.25Zm6.25 0h3.83v1.57h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.65 4.77 6.1v5.78h-4v-5.13c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.71v5.22h-4V9.25Z" />
+        </svg>
+        </a>
+                        <a href="https://github.com/vijaykumar00" class="icon-button" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.03 2.25c-5.48 0-9.93 4.45-9.93 9.94 0 4.39 2.84 8.11 6.79 9.43.5.09.68-.22.68-.48v-1.7c-2.76.6-3.34-1.18-3.34-1.18-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.88 1.51 2.31 1.08 2.88.82.09-.64.35-1.08.63-1.33-2.2-.25-4.52-1.1-4.52-4.91 0-1.08.39-1.97 1.02-2.66-.1-.25-.44-1.26.1-2.62 0 0 .83-.27 2.73 1.02a9.4 9.4 0 0 1 4.96 0c1.9-1.29 2.73-1.02 2.73-1.02.54 1.36.2 2.37.1 2.62.64.69 1.02 1.58 1.02 2.66 0 3.82-2.32 4.66-4.54 4.91.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48a9.95 9.95 0 0 0 6.78-9.43c0-5.49-4.45-9.94-9.94-9.94Z" clip-rule="evenodd" />
+        </svg>
+        </a>
+                    </div>
+                </div>
+</div>
+        </footer>
+    </body>
+</html>
