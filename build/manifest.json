@@ -48,12 +48,12 @@
     "src": "node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Cg30pfPL.css",
+    "file": "assets/app-Dv7dPRuw.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DVGn5na6.js",
+    "file": "assets/app-D2HJkWg9.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
