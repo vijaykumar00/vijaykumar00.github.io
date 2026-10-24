@@ -78,11 +78,12 @@
             })();
         </script>
 
-        <link rel="preload" as="style" href="./build/assets/app-Dv7dPRuw.css" /><link rel="modulepreload" href="./build/assets/app-D2HJkWg9.js" /><link rel="stylesheet" href="./build/assets/app-Dv7dPRuw.css" /><script type="module" src="./build/assets/app-D2HJkWg9.js"></script>    </head>
+        <link rel="preload" as="style" href="./build/assets/app-D2-FtWkH.css" /><link rel="modulepreload" href="./build/assets/app-CMCspBTe.js" /><link rel="stylesheet" href="./build/assets/app-D2-FtWkH.css" /><script type="module" src="./build/assets/app-CMCspBTe.js"></script>    </head>
     <body class="min-h-screen bg-porcelain text-ink antialiased transition-colors duration-300 dark:bg-obsidian dark:text-porcelain" @keydown.escape.window="mobileOpen = false">
         <a href="#main" class="skip-link">Skip to content</a>
 
         <header class="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/95 backdrop-blur dark:border-porcelain/10 dark:bg-obsidian/90">
+            <div class="scroll-progress" aria-hidden="true"></div>
             <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex min-h-16 items-center justify-between gap-4">
                     <a href="./" class="font-display text-xl font-semibold text-ink focus-ring dark:text-porcelain" aria-label="Vijay home">
@@ -168,14 +169,15 @@
 
         <main id="main">
             <section class="hero-shell">
-        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-16 lg:py-12">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 pb-24 pt-12 sm:pb-32 sm:pt-16 lg:pb-28 lg:pt-12">
     <div class="grid gap-8 lg:min-h-[calc(100svh-12rem)] lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:items-center">
                 <div class="hero-copy">
                     <h1 class="hero-title max-w-4xl font-display text-5xl font-semibold leading-tight text-ink dark:text-porcelain sm:text-6xl lg:text-7xl">
                         Hi, I'm Vijay <span class="inline-block" aria-hidden="true">👋</span>
                     </h1>
                     <p class="hero-lead mt-6 max-w-3xl text-xl leading-8 text-ink/80 dark:text-porcelain/80 sm:text-2xl">
-                        Developer, traveller, singer and weekend trekker.
+                        <span class="sr-only">Developer, traveller, singer and weekend trekker.</span>
+                        <span aria-hidden="true">I'm a <span class="typewriter font-semibold text-accent dark:text-champagne" data-words='["Laravel developer","traveller","singer","weekend trekker","guitar lover"]'>Laravel developer</span><span class="type-caret"></span></span>
                     </p>
                     <p class="hero-subcopy mt-6 max-w-2xl text-base leading-7 text-ink/70 dark:text-porcelain/70 sm:text-lg">
                         I spend my days building web apps with PHP and Laravel, and my free time chasing mountain trails, exploring new places and playing songs on my guitar. Welcome to my little corner of the internet.
@@ -198,17 +200,80 @@
                     </div>
                 </div>
 
-                <figure class="hero-photo relative mx-auto w-full max-w-md lg:mx-0 lg:ml-auto">
+                <figure class="hero-photo tilt relative mx-auto w-full max-w-md lg:mx-0 lg:ml-auto" data-tilt>
                     <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-champagne/30 via-transparent to-accent/25 blur-2xl" aria-hidden="true"></div>
                     <img src="./images/me/hero.webp" alt="Vijay holding a laptop in a pine forest in the mountains" width="900" height="1125" fetchpriority="high" class="relative aspect-[5/4] w-full rounded-3xl object-cover object-[50%_22%] shadow-soft sm:aspect-[4/5] sm:object-center ring-1 ring-ink/10 dark:ring-porcelain/15">
-                    <figcaption class="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-2xl bg-obsidian/75 px-4 py-3 text-sm font-medium text-porcelain backdrop-blur">
+                    <figcaption class="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-2xl bg-obsidian/75 sm:hidden px-4 py-3 text-sm font-medium text-porcelain backdrop-blur">
                         <span class="text-xl" aria-hidden="true">💻</span>
                         <span>Usually coding. Sometimes from the mountains.</span>
                     </figcaption>
+
+                    <span class="float-badge -right-3 top-6 sm:-right-6" aria-hidden="true"><span class="text-base">⚡</span> PHP · Laravel</span>
+                    <span class="float-badge float-badge-slow -left-3 top-1/3 sm:-left-8" aria-hidden="true"><span class="text-base">🎸</span> + <span class="text-base">🏔️</span></span>
+
+                    <div class="code-card hidden sm:block" aria-hidden="true">
+                        <div class="flex items-center gap-1.5 border-b border-white/10 px-4 py-2.5">
+                            <span class="size-2.5 rounded-full bg-[#ff5f57]"></span>
+                            <span class="size-2.5 rounded-full bg-[#febc2e]"></span>
+                            <span class="size-2.5 rounded-full bg-[#28c840]"></span>
+                            <span class="ml-2 text-[11px] text-white/45">vijay.php</span>
+                        </div>
+<pre class="code-type px-4 py-3" data-type-code><span class="c-var">$vijay</span> = <span class="c-cls">Developer</span>::<span class="c-fn">from</span>(<span class="c-str">'Himachal'</span>);
+<span class="c-var">$vijay</span>-&gt;<span class="c-fn">build</span>(<span class="c-str">'Laravel apps'</span>)
+      -&gt;<span class="c-fn">trek</span>(<span class="c-str">'mountains'</span>)
+      -&gt;<span class="c-fn">play</span>(<span class="c-str">'guitar'</span>);</pre>
+                    </div>
                 </figure>
             </div>
 </div>
+
+        <div class="ridges" aria-hidden="true">
+            <svg class="ridge ridge-back" data-depth="0.18" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 160 L120 110 L210 140 L330 70 L450 130 L560 90 L690 150 L820 60 L940 120 L1060 80 L1180 140 L1300 95 L1440 130 L1440 220 L0 220Z"/></svg>
+            <svg class="ridge ridge-mid" data-depth="0.1" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 180 L140 140 L260 170 L400 115 L520 165 L660 125 L780 175 L900 120 L1030 165 L1170 130 L1300 170 L1440 145 L1440 220 L0 220Z"/></svg>
+            <svg class="ridge ridge-front" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 200 L180 175 L320 195 L470 165 L620 198 L780 172 L940 196 L1100 170 L1260 194 L1440 178 L1440 220 L0 220Z"/></svg>
+        </div>
     </section>
+
+    <div class="marquee" aria-label="Tools I work with">
+        <div class="marquee-track">
+                            <ul class="marquee-list" >
+                                            <li>PHP 8</li>
+                                            <li>Laravel</li>
+                                            <li>Vue.js</li>
+                                            <li>Livewire</li>
+                                            <li>MySQL</li>
+                                            <li>Redis</li>
+                                            <li>REST APIs</li>
+                                            <li>Stripe</li>
+                                            <li>Razorpay</li>
+                                            <li>RapNet</li>
+                                            <li>IDEX</li>
+                                            <li>Tailwind CSS</li>
+                                            <li>Alpine.js</li>
+                                            <li>Pest</li>
+                                            <li>Git</li>
+                                            <li>Vite</li>
+                                    </ul>
+                            <ul class="marquee-list"  aria-hidden="true" >
+                                            <li>PHP 8</li>
+                                            <li>Laravel</li>
+                                            <li>Vue.js</li>
+                                            <li>Livewire</li>
+                                            <li>MySQL</li>
+                                            <li>Redis</li>
+                                            <li>REST APIs</li>
+                                            <li>Stripe</li>
+                                            <li>Razorpay</li>
+                                            <li>RapNet</li>
+                                            <li>IDEX</li>
+                                            <li>Tailwind CSS</li>
+                                            <li>Alpine.js</li>
+                                            <li>Pest</li>
+                                            <li>Git</li>
+                                            <li>Vite</li>
+                                    </ul>
+                    </div>
+    </div>
 
     <section  id="about"  class="section-band reveal" data-reveal>
     <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -266,22 +331,22 @@
                             </div>
         
         <div class="grid grid-cols-2 gap-3 sm:gap-5 xl:grid-cols-4">
-                            <article class="flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                            <article class="spot flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
                     <span class="flex size-11 items-center justify-center rounded-full bg-accent/10 text-2xl sm:size-14 sm:text-3xl ring-1 ring-accent/25 dark:bg-champagne/10 dark:ring-champagne/25" aria-hidden="true">✈️</span>
                     <h3 class="mt-4 text-base font-semibold text-ink dark:text-porcelain sm:mt-5 sm:text-lg">Travelling</h3>
                     <p class="mt-2 text-[13px] leading-5 sm:text-sm sm:leading-6 text-ink/70 dark:text-porcelain/70">New places, new food, new people. I am always planning the next trip, even when I should be fixing a bug.</p>
                 </article>
-                            <article class="flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                            <article class="spot flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
                     <span class="flex size-11 items-center justify-center rounded-full bg-accent/10 text-2xl sm:size-14 sm:text-3xl ring-1 ring-accent/25 dark:bg-champagne/10 dark:ring-champagne/25" aria-hidden="true">🏔️</span>
                     <h3 class="mt-4 text-base font-semibold text-ink dark:text-porcelain sm:mt-5 sm:text-lg">Trekking &amp; Adventure</h3>
                     <p class="mt-2 text-[13px] leading-5 sm:text-sm sm:leading-6 text-ink/70 dark:text-porcelain/70">Give me a mountain trail, a backpack and good company. Long walks, cold air and the view from the top are how I reset.</p>
                 </article>
-                            <article class="flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                            <article class="spot flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
                     <span class="flex size-11 items-center justify-center rounded-full bg-accent/10 text-2xl sm:size-14 sm:text-3xl ring-1 ring-accent/25 dark:bg-champagne/10 dark:ring-champagne/25" aria-hidden="true">🎤</span>
                     <h3 class="mt-4 text-base font-semibold text-ink dark:text-porcelain sm:mt-5 sm:text-lg">Singing</h3>
                     <p class="mt-2 text-[13px] leading-5 sm:text-sm sm:leading-6 text-ink/70 dark:text-porcelain/70">Music is my daily dose of happiness. I sing whenever I get the chance, whether anyone is listening or not.</p>
                 </article>
-                            <article class="flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                            <article class="spot flex h-full flex-col rounded-lg border border-ink/10 bg-white/70 p-4 shadow-soft transition duration-200 hover:-translate-y-1 sm:p-6 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
                     <span class="flex size-11 items-center justify-center rounded-full bg-accent/10 text-2xl sm:size-14 sm:text-3xl ring-1 ring-accent/25 dark:bg-champagne/10 dark:ring-champagne/25" aria-hidden="true">🎸</span>
                     <h3 class="mt-4 text-base font-semibold text-ink dark:text-porcelain sm:mt-5 sm:text-lg">Guitar</h3>
                     <p class="mt-2 text-[13px] leading-5 sm:text-sm sm:leading-6 text-ink/70 dark:text-porcelain/70">Evenings at home, campfires on trips, or learning that one new song I cannot stop humming. The guitar is always close by.</p>
@@ -361,7 +426,7 @@
             <p class="mb-3 text-sm text-ink/60 dark:text-porcelain/60 md:hidden" aria-hidden="true">Swipe to see more &rarr;</p>
             <div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 md:mx-0 md:grid md:snap-none md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 xl:grid-cols-3">
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'commerce'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <a  href="https://forevery.one/certified-loose-lab-grown-diamonds?is_labgrown=1" target="_blank" rel="noopener noreferrer"  class="relative block overflow-hidden border-b border-ink/10 bg-white dark:border-porcelain/10" tabindex="-1" aria-hidden="true">
             <img
                 src="./images/projects/forevery-live.webp"
@@ -426,7 +491,7 @@
 </article>
                     </div>
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'commerce'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <a  href="https://granddiamonds.com/" target="_blank" rel="noopener noreferrer"  class="relative block overflow-hidden border-b border-ink/10 bg-white dark:border-porcelain/10" tabindex="-1" aria-hidden="true">
             <img
                 src="./images/projects/granddiamonds-live.webp"
@@ -485,7 +550,7 @@
 </article>
                     </div>
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'saas'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <a  href="https://iamvector.com/" target="_blank" rel="noopener noreferrer"  class="relative block overflow-hidden border-b border-ink/10 bg-white dark:border-porcelain/10" tabindex="-1" aria-hidden="true">
             <img
                 src="./images/projects/iamvector-live.webp"
@@ -530,7 +595,7 @@
 </article>
                     </div>
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'payments'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <a  href="https://capitalmintmarkets.com/" target="_blank" rel="noopener noreferrer"  class="relative block overflow-hidden border-b border-ink/10 bg-white dark:border-porcelain/10" tabindex="-1" aria-hidden="true">
             <img
                 src="./images/projects/capitalmint-live.webp"
@@ -575,7 +640,7 @@
 </article>
                     </div>
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'payments'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <a  href="https://onlinepayment.afikgroup.com/index.php" target="_blank" rel="noopener noreferrer"  class="relative block overflow-hidden border-b border-ink/10 bg-white dark:border-porcelain/10" tabindex="-1" aria-hidden="true">
             <img
                 src="./images/projects/afik-live.webp"
@@ -634,7 +699,7 @@
 </article>
                     </div>
                                     <div class="w-[86%] shrink-0 snap-center sm:w-[70%] md:w-auto" x-show="filter === 'all' || filter === 'healthcare'" x-transition.opacity.duration.150ms>
-                        <article class="group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
+                        <article class="spot group flex h-full flex-col overflow-hidden rounded-lg border border-ink/10 bg-white/75 shadow-soft transition duration-200 hover:-translate-y-1 hover:border-accent/30 dark:border-porcelain/10 dark:bg-white/5">
             <div class="flex aspect-[48/31] w-full flex-col items-center justify-center gap-2 border-b border-ink/10 bg-gradient-to-br from-accent/15 via-transparent to-champagne/15 dark:border-porcelain/10" aria-hidden="true">
             <span class="font-display text-5xl font-semibold text-accent dark:text-champagne">A</span>
             <span class="text-xs font-semibold uppercase tracking-wide text-ink/50 dark:text-porcelain/50">Internal platform · not public</span>
@@ -687,23 +752,23 @@
     <h2 id="achievement-title" class="sr-only">Selected quantified achievements</h2>
             <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5 [&>*:last-child]:col-span-2 lg:[&>*:last-child]:col-span-1">
                                     <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
-    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne">40%</p>
+    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne" data-count="40%">40%</p>
     <p class="mt-2 text-[13px] font-medium leading-5 sm:mt-3 sm:text-sm sm:leading-6 text-porcelain/90">deployment overhead reduction across multi-brand jewelry storefronts</p>
 </article>
                                     <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
-    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne">60%</p>
+    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne" data-count="60%">60%</p>
     <p class="mt-2 text-[13px] font-medium leading-5 sm:mt-3 sm:text-sm sm:leading-6 text-porcelain/90">manual reporting effort cut across 50+ healthcare field staff</p>
 </article>
                                     <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
-    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne">25%</p>
+    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne" data-count="25%">25%</p>
     <p class="mt-2 text-[13px] font-medium leading-5 sm:mt-3 sm:text-sm sm:leading-6 text-porcelain/90">conversion uplift contribution from e-commerce performance work</p>
 </article>
                                     <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
-    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne">99.9%</p>
+    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne" data-count="99.9%">99.9%</p>
     <p class="mt-2 text-[13px] font-medium leading-5 sm:mt-3 sm:text-sm sm:leading-6 text-porcelain/90">uptime after the Atulaya clinical platform redesign</p>
 </article>
                                     <article class="stat-card border-porcelain/15 bg-porcelain/10 text-porcelain shadow-none ring-1 ring-porcelain/15">
-    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne">10,000+</p>
+    <p class="font-display text-3xl font-semibold sm:text-4xl text-champagne" data-count="10,000+">10,000+</p>
     <p class="mt-2 text-[13px] font-medium leading-5 sm:mt-3 sm:text-sm sm:leading-6 text-porcelain/90">certified stones handled through real-time diamond inventory</p>
 </article>
                             </div>
